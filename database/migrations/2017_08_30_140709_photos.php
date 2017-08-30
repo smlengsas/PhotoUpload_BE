@@ -13,7 +13,11 @@ class Photos extends Migration
      */
     public function up()
     {
-        //
+      Schema::create('photos', function(Blueprint $table) {
+        $table->increments('id');
+        $table->longText('photoURL');
+        $table->timestamps();
+      });
     }
 
     /**
@@ -23,6 +27,6 @@ class Photos extends Migration
      */
     public function down()
     {
-        //
+      Schema::drop('photos');
     }
 }
