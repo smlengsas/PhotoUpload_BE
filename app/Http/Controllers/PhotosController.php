@@ -30,6 +30,7 @@ class PhotosController extends Controller
 
     $photo = new Photo;
     $photo->photoURL = $request->root(). "/storage/".$photoName;
+    $photo->description = $photoUploader;
     $photo->save();
 
     return Response::json(['success' => 'Your Photo was Uploaded.']);

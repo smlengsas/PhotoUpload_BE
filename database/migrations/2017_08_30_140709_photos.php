@@ -16,6 +16,7 @@ class Photos extends Migration
       Schema::create('photos', function(Blueprint $table) {
         $table->increments('id');
         $table->longText('photoURL');
+        $table->longText('photoDesc');
         $table->timestamps();
       });
     }
